@@ -1,0 +1,402 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-27T23:51:37.223Z",
+  "title": "Design System: DietGPT (working name)",
+  "extensions": {
+    "colorMeta": {
+      "piedra": {
+        "role": "neutral",
+        "displayName": "Warm Stone",
+        "canonical": "oklch(0.91 0.015 80)",
+        "tonalRamp": [
+          "oklch(0.15 0.015 80)",
+          "oklch(0.27 0.015 80)",
+          "oklch(0.39 0.015 80)",
+          "oklch(0.51 0.015 80)",
+          "oklch(0.63 0.015 80)",
+          "oklch(0.75 0.015 80)",
+          "oklch(0.85 0.015 80)",
+          "oklch(0.95 0.015 80)"
+        ]
+      },
+      "piedra-hondo": {
+        "role": "neutral",
+        "displayName": "Deep Stone",
+        "canonical": "oklch(0.86 0.02 80)",
+        "tonalRamp": [
+          "oklch(0.15 0.02 80)",
+          "oklch(0.27 0.02 80)",
+          "oklch(0.39 0.02 80)",
+          "oklch(0.51 0.02 80)",
+          "oklch(0.63 0.02 80)",
+          "oklch(0.75 0.02 80)",
+          "oklch(0.85 0.02 80)",
+          "oklch(0.95 0.02 80)"
+        ]
+      },
+      "loza": {
+        "role": "neutral",
+        "displayName": "Glaze",
+        "canonical": "oklch(0.98 0.008 85)",
+        "tonalRamp": [
+          "oklch(0.15 0.008 85)",
+          "oklch(0.27 0.008 85)",
+          "oklch(0.39 0.008 85)",
+          "oklch(0.51 0.008 85)",
+          "oklch(0.63 0.008 85)",
+          "oklch(0.75 0.008 85)",
+          "oklch(0.85 0.008 85)",
+          "oklch(0.95 0.008 85)"
+        ]
+      },
+      "pizarra": {
+        "role": "secondary",
+        "displayName": "Slate",
+        "canonical": "oklch(0.35 0.02 220)",
+        "tonalRamp": [
+          "oklch(0.15 0.02 220)",
+          "oklch(0.27 0.02 220)",
+          "oklch(0.39 0.02 220)",
+          "oklch(0.51 0.02 220)",
+          "oklch(0.63 0.02 220)",
+          "oklch(0.75 0.02 220)",
+          "oklch(0.85 0.02 220)",
+          "oklch(0.95 0.02 220)"
+        ]
+      },
+      "pizarra-hondo": {
+        "role": "secondary",
+        "displayName": "Deep Slate",
+        "canonical": "oklch(0.28 0.02 220)",
+        "tonalRamp": [
+          "oklch(0.15 0.02 220)",
+          "oklch(0.27 0.02 220)",
+          "oklch(0.39 0.02 220)",
+          "oklch(0.51 0.02 220)",
+          "oklch(0.63 0.02 220)",
+          "oklch(0.75 0.02 220)",
+          "oklch(0.85 0.02 220)",
+          "oklch(0.95 0.02 220)"
+        ]
+      },
+      "terracota": {
+        "role": "primary",
+        "displayName": "Terracotta",
+        "canonical": "oklch(0.52 0.13 45)",
+        "tonalRamp": [
+          "oklch(0.15 0.13 45)",
+          "oklch(0.27 0.13 45)",
+          "oklch(0.39 0.13 45)",
+          "oklch(0.51 0.13 45)",
+          "oklch(0.63 0.13 45)",
+          "oklch(0.75 0.13 45)",
+          "oklch(0.85 0.13 45)",
+          "oklch(0.95 0.13 45)"
+        ]
+      },
+      "terracota-hondo": {
+        "role": "primary",
+        "displayName": "Deep Terracotta",
+        "canonical": "oklch(0.45 0.13 45)",
+        "tonalRamp": [
+          "oklch(0.15 0.13 45)",
+          "oklch(0.27 0.13 45)",
+          "oklch(0.39 0.13 45)",
+          "oklch(0.51 0.13 45)",
+          "oklch(0.63 0.13 45)",
+          "oklch(0.75 0.13 45)",
+          "oklch(0.85 0.13 45)",
+          "oklch(0.95 0.13 45)"
+        ]
+      },
+      "mostaza": {
+        "role": "tertiary",
+        "displayName": "Mustard",
+        "canonical": "oklch(0.76 0.13 80)",
+        "tonalRamp": [
+          "oklch(0.15 0.13 80)",
+          "oklch(0.27 0.13 80)",
+          "oklch(0.39 0.13 80)",
+          "oklch(0.51 0.13 80)",
+          "oklch(0.63 0.13 80)",
+          "oklch(0.75 0.13 80)",
+          "oklch(0.85 0.13 80)",
+          "oklch(0.95 0.13 80)"
+        ]
+      },
+      "celadon": {
+        "role": "tertiary",
+        "displayName": "Celadon",
+        "canonical": "oklch(0.74 0.05 160)",
+        "tonalRamp": [
+          "oklch(0.15 0.05 160)",
+          "oklch(0.27 0.05 160)",
+          "oklch(0.39 0.05 160)",
+          "oklch(0.51 0.05 160)",
+          "oklch(0.63 0.05 160)",
+          "oklch(0.75 0.05 160)",
+          "oklch(0.85 0.05 160)",
+          "oklch(0.95 0.05 160)"
+        ]
+      },
+      "tinta": {
+        "role": "neutral",
+        "displayName": "Blue-Grey Ink",
+        "canonical": "oklch(0.3 0.02 230)",
+        "tonalRamp": [
+          "oklch(0.15 0.02 230)",
+          "oklch(0.27 0.02 230)",
+          "oklch(0.39 0.02 230)",
+          "oklch(0.51 0.02 230)",
+          "oklch(0.63 0.02 230)",
+          "oklch(0.75 0.02 230)",
+          "oklch(0.85 0.02 230)",
+          "oklch(0.95 0.02 230)"
+        ]
+      },
+      "tinta-suave": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "oklch(0.47 0.02 240)",
+        "tonalRamp": [
+          "oklch(0.15 0.02 240)",
+          "oklch(0.27 0.02 240)",
+          "oklch(0.39 0.02 240)",
+          "oklch(0.51 0.02 240)",
+          "oklch(0.63 0.02 240)",
+          "oklch(0.75 0.02 240)",
+          "oklch(0.85 0.02 240)",
+          "oklch(0.95 0.02 240)"
+        ]
+      },
+      "linea": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "oklch(0.8 0.02 80)",
+        "tonalRamp": [
+          "oklch(0.15 0.02 80)",
+          "oklch(0.27 0.02 80)",
+          "oklch(0.39 0.02 80)",
+          "oklch(0.51 0.02 80)",
+          "oklch(0.63 0.02 80)",
+          "oklch(0.75 0.02 80)",
+          "oklch(0.85 0.02 80)",
+          "oklch(0.95 0.02 80)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "title": {
+        "displayName": "Title",
+        "purpose": "H1 on each page, 56px serif."
+      },
+      "title-mobile": {
+        "displayName": "Title (mobile)",
+        "purpose": "H1 below sm, 36px."
+      },
+      "plate-goal": {
+        "displayName": "Plate goal",
+        "purpose": "The goal at the centre of the plate."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "The plate's own title."
+      },
+      "heading": {
+        "displayName": "Heading",
+        "purpose": "Day names, meal names, wordmark size."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose, plan text, inputs."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Button label, semibold."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field labels and legends."
+      }
+    },
+    "shadows": [
+      {
+        "name": "loza",
+        "value": "0 1px 2px oklch(0.3 0.02 230 / 0.12)",
+        "purpose": "Hairline lift: fields, segments, tiles, notices, secondary buttons, selected tab."
+      },
+      {
+        "name": "tarjeta",
+        "value": "0 1px 2px oklch(0.3 0.02 230 / 0.1), 0 18px 36px -22px oklch(0.3 0.02 230 / 0.35)",
+        "purpose": "Large cards: day cards, compact mobile plate card, skip link."
+      },
+      {
+        "name": "plato",
+        "value": "0 2px 3px oklch(0.3 0.02 230 / 0.15), 0 30px 50px -24px oklch(0.3 0.02 230 / 0.4), inset 0 2px 1px oklch(1 0 0)",
+        "purpose": "The plate's raised rim only."
+      },
+      {
+        "name": "pozo",
+        "value": "inset 0 5px 14px oklch(0.3 0.02 230 / 0.2), inset 0 -2px 3px oklch(1 0 0 / 0.9), 0 1px 0 oklch(1 0 0)",
+        "purpose": "The plate's sunken well only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Easing of the repaint wipe."
+      },
+      {
+        "name": "repaint",
+        "value": "240ms ease-out-expo backwards; clip-path inset(0 0 100% 0) to inset(0), translateY(-0.18em) to none",
+        "purpose": "The single signature motion; only under data-live=true, off under prefers-reduced-motion."
+      },
+      {
+        "name": "state-transition",
+        "value": "150ms colour transition (300ms for week dots)",
+        "purpose": "Hover and state colour shifts."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one primary action, terracotta pill.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Armar mi plan</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border:0;border-radius:9999px;font:600 16px/1.5 var(--font-sans,'Instrument Sans',system-ui,sans-serif);cursor:pointer;transition:background-color .15s}.ds-btn:focus-visible{outline:3px solid var(--color-pizarra);outline-offset:2px}.ds-btn-primary{background:var(--color-terracota);color:var(--color-loza)}.ds-btn-primary:hover{background:var(--color-terracota-hondo)}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Glaze pill with a hairline lift, for secondary actions.",
+      "html": "<button class=\"ds-btn ds-btn-secondary\">Descartar</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border:0;border-radius:9999px;font:600 16px/1.5 var(--font-sans,'Instrument Sans',system-ui,sans-serif);cursor:pointer;transition:background-color .15s}.ds-btn:focus-visible{outline:3px solid var(--color-pizarra);outline-offset:2px}.ds-btn-secondary{background:var(--color-loza);color:var(--color-tinta);box-shadow:0 1px 2px oklch(0.3 0.02 230 / 0.12)}.ds-btn-secondary:hover{background:var(--color-piedra-hondo)}"
+    },
+    {
+      "name": "Input with unit",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Borderless glaze field with a pinned unit.",
+      "html": "<div class=\"ds-input\"><input class=\"ds-input-el\" type=\"number\" placeholder=\"70\"><span class=\"ds-input-unit\">kg</span></div>",
+      "css": ".ds-input{display:flex;align-items:center;min-height:48px;border-radius:16px;background:var(--color-loza);box-shadow:0 1px 2px oklch(0.3 0.02 230 / 0.12)}.ds-input:focus-within{outline:3px solid var(--color-pizarra);outline-offset:2px}.ds-input-el{flex:1;min-width:0;background:transparent;border:0;outline:0;padding:8px 16px;font:400 16px var(--font-sans,'Instrument Sans',system-ui,sans-serif);font-variant-numeric:tabular-nums;color:var(--color-tinta)}.ds-input-el::placeholder{color:var(--color-tinta-suave)}.ds-input-unit{padding-right:16px;font-size:14px;font-weight:500;color:var(--color-tinta-suave)}"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "chip",
+      "refersTo": "segment-selected",
+      "description": "Radio segments; selected is slate with a check.",
+      "html": "<div class=\"ds-seg\"><span class=\"ds-seg-item\">Mujer</span><span class=\"ds-seg-item ds-seg-on\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg>Hombre</span></div>",
+      "css": ".ds-seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}.ds-seg-item{display:flex;align-items:center;justify-content:center;gap:6px;min-height:48px;border-radius:16px;background:var(--color-loza);color:var(--color-tinta);font:500 16px var(--font-sans,'Instrument Sans',system-ui,sans-serif);box-shadow:0 1px 2px oklch(0.3 0.02 230 / 0.12);cursor:pointer;transition:background-color .15s}.ds-seg-item:hover{background:var(--color-piedra-hondo)}.ds-seg-on{background:var(--color-pizarra);color:var(--color-loza);font-weight:600}.ds-seg-on:hover{background:var(--color-pizarra-hondo)}"
+    },
+    {
+      "name": "Tabs",
+      "kind": "nav",
+      "refersTo": "tab-selected",
+      "description": "Pill track with a glaze selected tab.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\"><button class=\"ds-tab ds-tab-on\" role=\"tab\">Comida</button><button class=\"ds-tab\" role=\"tab\">Entreno</button></div>",
+      "css": ".ds-tabs{display:inline-flex;gap:4px;padding:4px;border-radius:9999px;background:var(--color-piedra-hondo)}.ds-tab{min-height:44px;padding:0 20px;border:0;border-radius:9999px;background:transparent;color:var(--color-tinta);font:500 16px var(--font-sans,'Instrument Sans',system-ui,sans-serif);cursor:pointer;transition:background-color .15s}.ds-tab:hover{background:oklch(0.98 0.008 85 / 0.6)}.ds-tab:focus-visible{outline:3px solid var(--color-pizarra);outline-offset:2px}.ds-tab-on{background:var(--color-loza);font-weight:600;box-shadow:0 1px 2px oklch(0.3 0.02 230 / 0.12)}"
+    },
+    {
+      "name": "Board Tile",
+      "kind": "card",
+      "refersTo": "board-tile",
+      "description": "Glazed tile with a small label and the chosen value.",
+      "html": "<dl class=\"ds-tile\"><dt class=\"ds-tile-l\">Edad</dt><dd class=\"ds-tile-v\">34 años</dd></dl>",
+      "css": ".ds-tile{display:flex;flex-direction:column;justify-content:center;min-height:64px;margin:0;padding:8px 16px;border-radius:16px;background:var(--color-loza);box-shadow:0 1px 2px oklch(0.3 0.02 230 / 0.12);font-family:var(--font-sans,'Instrument Sans',system-ui,sans-serif);color:var(--color-tinta)}.ds-tile-l{font-size:14px;font-weight:500;color:var(--color-tinta-suave)}.ds-tile-v{margin:0;font-size:18px;font-weight:600;line-height:1.2;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Notice",
+      "kind": "custom",
+      "refersTo": "notice",
+      "description": "Glaze info notice with icon; error adds a deep-terracotta ring.",
+      "html": "<div class=\"ds-notice\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 16v-4M12 8h.01\"/></svg><div>Es una guía general y no sustituye a un profesional.</div></div>",
+      "css": ".ds-notice{display:flex;align-items:flex-start;gap:12px;padding:16px;border-radius:16px;background:var(--color-loza);color:var(--color-tinta-suave);font:400 14px/1.5 var(--font-sans,'Instrument Sans',system-ui,sans-serif);box-shadow:0 1px 2px oklch(0.3 0.02 230 / 0.12)}.ds-notice svg{margin-top:2px;flex-shrink:0}"
+    },
+    {
+      "name": "El plato",
+      "kind": "custom",
+      "refersTo": "plate",
+      "description": "Signature: raised plate, sunken well, goal in serif, seven week dots.",
+      "html": "<div class=\"ds-plate\"><div class=\"ds-well\"></div><div class=\"ds-plate-in\"><p class=\"ds-plate-l\">Tu objetivo</p><p class=\"ds-plate-g\">Tonificar</p><div class=\"ds-dots\"><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i></i><i></i><i></i></div></div></div>",
+      "css": ".ds-plate{position:relative;display:grid;place-items:center;width:320px;aspect-ratio:1;border-radius:9999px;background:radial-gradient(circle at 50% 30%,white,var(--color-loza) 55%,oklch(0.95 0.015 85));box-shadow:0 2px 3px oklch(0.3 0.02 230 / 0.15),0 30px 50px -24px oklch(0.3 0.02 230 / 0.4),inset 0 2px 1px oklch(1 0 0)}.ds-well{position:absolute;inset:8.5%;border-radius:9999px;background:linear-gradient(to bottom,oklch(0.945 0.012 85),var(--color-loza) 65%);box-shadow:inset 0 5px 14px oklch(0.3 0.02 230 / 0.2),inset 0 -2px 3px oklch(1 0 0 / 0.9),0 1px 0 oklch(1 0 0)}.ds-plate-in{position:relative;padding:0 24px;text-align:center}.ds-plate-l{margin:0;font:500 14px var(--font-sans,'Instrument Sans',system-ui,sans-serif);color:var(--color-tinta-suave)}.ds-plate-g{margin:12px 0;font:400 36px/1.15 var(--font-display,'DM Serif Display',Georgia,serif);color:var(--color-terracota-hondo)}.ds-dots{display:flex;justify-content:center;gap:6px}.ds-dots i{width:12px;height:12px;border-radius:9999px;background:oklch(0.74 0.05 160 / 0.6)}.ds-dots i.on{background:var(--color-mostaza)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "El plato de ceramica",
+    "overview": "The world is a ceramic plate on a stone counter, and it lends four things only: a warm display serif against a humanist sans, a palette of stone, glazed white, slate and terracotta, generous air with very round corners, and one signature move. It does not lend layout, navigation or controls. Those stay standard web: a 64px header with a step indicator, a 7/5 split, real radios, a real select, real tabs.\n\nThe signature is the plate: a round glazed plate with a sunken well that reads the visitor's goal back in terracotta serif as they choose, with seven dots for the days of the week. Six glazed cards below it hold the other answers. When a value changes it is \"glazed\" in with one short vertical wipe. On the plan page the same plate heads the plan. Everything else is quiet: surfaces have no border, depth comes from soft offset-and-blur shadows, buttons are pills.",
+    "keyCharacteristics": [
+      "Borderless surfaces; soft shadows carry all depth.",
+      "Serif voice for the wordmark, headings, day and meal names and the plate goal; sans for everything read or typed.",
+      "Terracotta fills the one primary action; slate marks selection and focus.",
+      "State is never colour alone: Check plus fill for selected, icon plus text for errors, underline for the current step.",
+      "One motion moment: the repaint wipe."
+    ],
+    "rules": [
+      {
+        "name": "The One Action Rule",
+        "body": "Terracotta fills only the primary action. Errors use deep terracotta as a 2px ring and as text with an icon, never as a fill.",
+        "section": "colors"
+      },
+      {
+        "name": "The Contrast Pair Rule",
+        "body": "Terracotta is a fill (white text on it); deep terracotta is the text colour on stone or glaze. Do not swap them.",
+        "section": "colors"
+      },
+      {
+        "name": "The Dots Only Rule",
+        "body": "Mustard and celadon appear in the week dots (and mustard as selection highlight). They are never a button, card or text colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Serif Names Rule",
+        "body": "DM Serif Display appears only on the wordmark, headings, meal and day names, and the plate goal. Never on buttons, labels, form text or body.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Any figure the reader compares (inputs, tile values, sets and reps, the stepper numbers) is set `tabular-nums`.",
+        "section": "typography"
+      },
+      {
+        "name": "The Soft Shadow Rule",
+        "body": "Every shadow is ink-tinted, blurred and offset downward; never a solid offset, never black. Surfaces carry no border.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Plate Glaze Rule",
+        "body": "The plate's two subtle glaze gradients (a white-to-glaze radial on the rim, a stone-to-glaze linear in the well) belong to the plate and its relief. No other surface gets a gradient.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep depth to the four ink-tinted shadows (loza, tarjeta, plato, pozo) and leave surfaces borderless.",
+      "Do use pills for buttons and tabs, 16px for controls and tiles, 24px for large cards.",
+      "Do use deep terracotta for terracotta text and error rings; terracotta only as the primary fill.",
+      "Do pair every state colour with an icon, weight or text change.",
+      "Do add new colours in `@theme` as oklch in the same warm-stone family; gate any new animated value behind `data-live` and a reduced-motion override.",
+      "Do keep touch targets at 48px (44px for tabs) and figures tabular."
+    ],
+    "donts": [
+      "Don't add borders, hard offset shadows, 900 weights or thick outlines; the world rejects the neobrutalist look.",
+      "Don't put mustard or celadon anywhere but the week dots and the text selection.",
+      "Don't set the serif on buttons, labels, form text or body, and don't bold it.",
+      "Don't convey a state with colour alone.",
+      "Don't fall back to the category default: white card with a gradient, an \"AI\" badge.",
+      "Don't repaint on first paint or add other entrance animation."
+    ]
+  }
+}

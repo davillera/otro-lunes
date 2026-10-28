@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es"><meta charset="utf-8"><title>Recetario</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--papel:#F7F1E5;--tarjeta:#FFFDF8;--tinta:#2B2118;--suave:#6B5B4B;--terra:#A8452A;--linea:#D9CDB8}
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;background:var(--papel);color:var(--tinta);font:16px/1.5 "Public Sans",system-ui,sans-serif}
+header{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 64px;border-bottom:1px solid var(--linea)}
+.logo{font:500 26px/1 Fraunces,serif;letter-spacing:-.01em}.logo em{color:var(--terra)}
+nav{display:flex;gap:32px;font-size:14px;color:var(--suave)}nav .on{color:var(--tinta);font-weight:600;border-bottom:2px solid var(--terra);padding-bottom:4px}
+main{display:grid;grid-template-columns:7fr 5fr;gap:56px;padding:44px 64px;height:828px}
+.l{display:flex;flex-direction:column;gap:22px}
+h1{font:400 56px/1.04 Fraunces,serif;letter-spacing:-.02em;font-variation-settings:"opsz" 144}
+h1 em{color:var(--terra);font-style:italic}
+.lead{font-size:18px;color:var(--suave);max-width:46ch}
+.g{display:grid;grid-template-columns:repeat(6,1fr);gap:22px 24px}
+.f{grid-column:span 2}.w3{grid-column:span 3}.w6{grid-column:span 6}
+label,legend{display:block;font-size:13px;font-weight:600;color:var(--suave);margin-bottom:4px}
+.in{height:46px;border-bottom:1px solid var(--tinta);display:flex;align-items:center;justify-content:space-between;font:400 20px Fraunces,serif}
+.in i{font:400 14px "Public Sans";font-style:normal;color:var(--suave)}
+.seg{display:flex;gap:22px;height:46px;align-items:center;border-bottom:1px solid var(--linea)}
+.seg span{padding:10px 0;margin-bottom:-1px;color:var(--suave);font-weight:500}
+.seg .on{color:var(--terra);font-weight:600;border-bottom:2px solid var(--terra)}
+.btn{height:54px;padding:0 32px;background:var(--terra);color:#fff;border-radius:999px;font-weight:600;font-size:16px;display:inline-flex;align-items:center;align-self:flex-start;margin-top:4px}
+.card{background:var(--tarjeta);border-radius:8px;padding:40px 44px;box-shadow:0 1px 2px #2b211814,0 24px 48px -24px #2b211833;display:flex;flex-direction:column;gap:14px;align-self:start;min-height:740px}
+.card h2{font:400 40px/1.05 Fraunces,serif;letter-spacing:-.015em}
+.card .sub{font:italic 400 17px Fraunces,serif;color:var(--suave);padding-bottom:14px;border-bottom:1px solid var(--linea)}
+.card h3{font:600 13px "Public Sans";color:var(--terra);margin-top:6px}
+.row{display:flex;align-items:baseline;gap:10px;font-size:16px}
+.row::after{content:"";order:1;flex:1;border-bottom:1.5px dotted #B9A98E;transform:translateY(-4px)}
+.row span{order:0}.row b{order:2;font:500 21px Fraunces,serif}
+.note{margin-top:auto;font:italic 400 14px/1.5 Fraunces,serif;color:var(--suave);padding-top:14px;border-top:1px solid var(--linea)}
+</style>
+<header><div class="logo">Diet<em>GPT</em></div><nav><span class="on">1 Tus datos</span><span>2 Tu plan</span></nav></header>
+<main>
+<section class="l">
+<h1>Tu plan de comida <em>y entreno</em></h1>
+<p class="lead">Siete datos y listo: un plan por comidas y una rutina por cada día que entrenas.</p>
+<div class="g">
+<div class="w3"><legend>Sexo</legend><div class="seg"><span>Mujer</span><span class="on">Hombre</span></div></div>
+<div class="w3"><label>Tipo de cuerpo</label><div class="in">Mesomorfo <i>▾</i></div></div>
+<div class="f"><label>Edad</label><div class="in">30 <i>años</i></div></div>
+<div class="f"><label>Peso</label><div class="in">80 <i>kg</i></div></div>
+<div class="f"><label>Altura</label><div class="in">178 <i>cm</i></div></div>
+<div class="w6"><legend>Días de ejercicio por semana</legend><div class="seg"><span>1</span><span>2</span><span class="on">3</span><span>4</span><span>5</span><span>6</span><span>7</span></div></div>
+<div class="w6"><legend>Objetivo</legend><div class="seg"><span class="on">Bajar grasa</span><span>Ganar músculo</span><span>Tonificar</span><span>Mantenerme saludable</span></div></div>
+</div>
+<div class="btn">Armar mi plan →</div>
+</section>
+<aside class="card">
+<h2>Tu tablero</h2><div class="sub">Para una persona · datos de partida</div>
+<h3>Ingredientes</h3>
+<div class="row"><span>Sexo</span><b>Hombre</b></div>
+<div class="row"><span>Edad</span><b>30 años</b></div>
+<div class="row"><span>Peso</span><b>80 kg</b></div>
+<div class="row"><span>Altura</span><b>178 cm</b></div>
+<div class="row"><span>Tipo de cuerpo</span><b>Mesomorfo</b></div>
+<h3>Cocción</h3>
+<div class="row"><span>Días de entreno</span><b>3 por semana</b></div>
+<div class="row"><span>Objetivo</span><b>Bajar grasa</b></div>
+<p class="note">Es una guía general generada con IA y no sustituye a un médico, nutricionista o entrenador.</p>
+</aside>
+</main>
+</html>

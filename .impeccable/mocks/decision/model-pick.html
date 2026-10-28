@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es"><meta charset="utf-8"><title>Sistema Múnich 72</title>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--cielo:#2F9BE0;--cielo2:#E4F1FA;--nar:#F28A1F;--tinta:#101820}
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;background:#fff;color:var(--tinta);font:16px/1.5 "Albert Sans",system-ui,sans-serif}
+header{height:64px;border-bottom:4px solid var(--cielo);display:flex;align-items:center;justify-content:space-between;padding:0 48px}
+.logo{font-weight:900;font-size:24px;letter-spacing:-.02em;display:flex;gap:10px;align-items:center}
+.logo i{width:22px;height:22px;border-radius:50%;background:var(--nar);display:block}
+nav{display:flex;gap:28px;font-size:14px;font-weight:600}nav .on{border-bottom:3px solid var(--cielo)}
+main{display:grid;grid-template-columns:8fr 4fr;height:832px}
+.l{padding:44px 56px;display:flex;flex-direction:column;gap:24px}
+h1{font-size:56px;line-height:1;font-weight:900;letter-spacing:-.03em}
+.lead{font-size:19px;color:#3a4650;max-width:46ch}
+.g{display:grid;grid-template-columns:repeat(6,1fr);gap:22px 20px}
+.f{grid-column:span 2}.w3{grid-column:span 3}.w6{grid-column:span 6}
+label,legend{display:block;font-size:14px;font-weight:800;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+.in{height:48px;border:2px solid var(--tinta);border-radius:24px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;font-weight:600}
+.in i{font-style:normal;opacity:.55;font-size:14px}
+.seg{display:flex;gap:8px}.seg span{flex:1;height:48px;border:2px solid var(--tinta);border-radius:24px;display:grid;place-items:center;font-weight:600}
+.seg .on{background:var(--tinta);border-color:var(--tinta);color:#fff}
+.btn{height:54px;padding:0 32px;background:var(--nar);color:var(--tinta);border-radius:27px;font-weight:900;font-size:17px;display:inline-flex;align-items:center;align-self:flex-start}
+.r{background:var(--cielo);color:var(--tinta);padding:40px 36px;display:flex;flex-direction:column;gap:4px}
+.r h2{font-size:26px;font-weight:900;margin-bottom:14px}
+.row{display:grid;grid-template-columns:52px 1fr auto;gap:14px;align-items:center;padding:10px 0;border-top:2px solid #ffffff55}
+.pic{width:52px;height:52px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.row span{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.row b{font-size:26px;font-weight:900;letter-spacing:-.02em}
+.note{margin-top:auto;font-size:13px}
+</style>
+<header><div class="logo"><i></i>DietGPT</div><nav><span class="on">1 Tus datos</span><span>2 Tu plan</span></nav></header>
+<main>
+<section class="l">
+<h1>Tu plan de comida y entreno</h1>
+<p class="lead">Siete datos y listo: un plan por comidas y una rutina por cada día que entrenas.</p>
+<div class="g">
+<div class="w3"><legend>Sexo</legend><div class="seg"><span>Mujer</span><span class="on">Hombre</span></div></div>
+<div class="w3"><label>Tipo de cuerpo</label><div class="in">Mesomorfo <i>▾</i></div></div>
+<div class="f"><label>Edad</label><div class="in">30 <i>años</i></div></div>
+<div class="f"><label>Peso</label><div class="in">80 <i>kg</i></div></div>
+<div class="f"><label>Altura</label><div class="in">178 <i>cm</i></div></div>
+<div class="w6"><legend>Días de ejercicio por semana</legend><div class="seg"><span>1</span><span>2</span><span class="on">3</span><span>4</span><span>5</span><span>6</span><span>7</span></div></div>
+<div class="w6"><legend>Objetivo</legend><div class="seg"><span class="on">Bajar grasa</span><span>Ganar músculo</span><span>Tonificar</span><span>Mantenerme saludable</span></div></div>
+</div>
+<div class="btn">Armar mi plan →</div>
+</section>
+<aside class="r">
+<h2>Tu tablero</h2>
+<div class="row"><div class="pic"><svg width="30" height="30" viewBox="0 0 30 30" fill="#101820"><circle cx="15" cy="6" r="4"/><path d="M8 28V15l7-4 7 4v13h-4V18l-3-1-3 1v10z"/></svg></div><span>Sexo</span><b>Hombre</b></div>
+<div class="row"><div class="pic"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#101820" stroke-width="3"><circle cx="15" cy="15" r="10"/><path d="M15 8v7l5 3"/></svg></div><span>Edad</span><b>30 años</b></div>
+<div class="row"><div class="pic"><svg width="30" height="30" viewBox="0 0 30 30" fill="#101820"><path d="M5 26h20l-3-16H8z"/><circle cx="15" cy="7" r="3.5"/></svg></div><span>Peso</span><b>80 kg</b></div>
+<div class="row"><div class="pic"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#101820" stroke-width="3"><path d="M15 3v24M9 7l6-4 6 4M9 23l6 4 6-4"/></svg></div><span>Altura</span><b>178 cm</b></div>
+<div class="row"><div class="pic"><svg width="30" height="30" viewBox="0 0 30 30" fill="#101820"><circle cx="15" cy="5" r="3.5"/><path d="M4 11h22v4H19v13h-4v-7h-0v7h-4V15H4z"/></svg></div><span>Cuerpo</span><b>Mesomorfo</b></div>
+<div class="row"><div class="pic"><svg width="30" height="30" viewBox="0 0 30 30" fill="#101820"><rect x="2" y="12" width="4" height="6"/><rect x="24" y="12" width="4" height="6"/><rect x="6" y="9" width="3" height="12"/><rect x="21" y="9" width="3" height="12"/><rect x="9" y="14" width="12" height="2"/></svg></div><span>Entrenas</span><b>3 días</b></div>
+<div class="row"><div class="pic"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#101820" stroke-width="3"><circle cx="15" cy="15" r="11"/><circle cx="15" cy="15" r="5"/></svg></div><span>Objetivo</span><b>Bajar grasa</b></div>
+<p class="note">Es una guía general generada con IA y no sustituye a un médico, nutricionista o entrenador.</p>
+</aside>
+</main>
+</html>

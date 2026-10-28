@@ -1,26 +1,122 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * Mundo visual: plato de cerámica.
+ * Piedra de fondo, loza para las superficies, pizarra para la selección,
+ * terracota para la acción primaria y el objetivo, tinta azul-gris para el texto.
+ * Mostaza y celadón solo viven en los siete puntos de la semana.
+ */
+@theme {
+  --color-piedra: oklch(0.91 0.015 80);
+  --color-piedra-hondo: oklch(0.86 0.02 80);
+  --color-loza: oklch(0.98 0.008 85);
+  --color-pizarra: oklch(0.35 0.02 220);
+  --color-pizarra-hondo: oklch(0.28 0.02 220);
+  --color-terracota: oklch(0.52 0.13 45);
+  --color-terracota-hondo: oklch(0.45 0.13 45);
+  --color-mostaza: oklch(0.76 0.13 80);
+  --color-celadon: oklch(0.74 0.05 160);
+  --color-tinta: oklch(0.3 0.02 230);
+  --color-tinta-suave: oklch(0.47 0.02 240);
+  --color-linea: oklch(0.8 0.02 80);
+
+  --font-sans: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-dm-serif), ui-serif, Georgia, serif;
+
+  --text-title: 3.5rem;
+  --text-title--line-height: 1.05;
+
+  --shadow-loza: 0 1px 2px oklch(0.3 0.02 230 / 0.12);
+  --shadow-tarjeta:
+    0 1px 2px oklch(0.3 0.02 230 / 0.1),
+    0 18px 36px -22px oklch(0.3 0.02 230 / 0.35);
+  --shadow-plato:
+    0 2px 3px oklch(0.3 0.02 230 / 0.15),
+    0 30px 50px -24px oklch(0.3 0.02 230 / 0.4), inset 0 2px 1px oklch(1 0 0);
+  --shadow-pozo:
+    inset 0 5px 14px oklch(0.3 0.02 230 / 0.2),
+    inset 0 -2px 3px oklch(1 0 0 / 0.9), 0 1px 0 oklch(1 0 0);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    color-scheme: light;
+    background: var(--color-piedra);
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    min-height: 100dvh;
+    background: var(--color-piedra);
+    color: var(--color-tinta);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--color-mostaza);
+    color: var(--color-tinta);
+  }
+
+  input,
+  select,
+  textarea {
+    caret-color: var(--color-terracota);
+    accent-color: var(--color-pizarra);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-pizarra);
+    outline-offset: 2px;
+  }
+
+  input[type="number"] {
+    appearance: textfield;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  button:not(:disabled),
+  [role="tab"],
+  select,
+  label:has(input[type="radio"]) {
+    cursor: pointer;
+  }
+
+  a {
+    text-underline-offset: 3px;
+  }
+
+  * {
+    scrollbar-color: var(--color-linea) transparent;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* La jugada de firma: el valor del plato se "esmalta" con un barrido corto cuando cambia. */
+@keyframes repaint {
+  from {
+    clip-path: inset(0 0 100% 0);
+    transform: translateY(-0.18em);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    transform: none;
+  }
+}
+
+[data-live="true"] .repaint-value {
+  animation: repaint 240ms var(--ease-out-expo) backwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-live="true"] .repaint-value {
+    animation: none;
+  }
 }

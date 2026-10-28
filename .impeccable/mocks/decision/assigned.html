@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es"><meta charset="utf-8"><title>Perfil de etapa</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+:root{--rosa:#F6C3D0;--rosa2:#EBA3B8;--mar:#12204A;--mar2:#1C2F63;--azul:#1F5BFF}
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;background:var(--rosa);color:var(--mar);font:16px/1.5 Archivo,system-ui,sans-serif}
+.d{font-stretch:75%;font-weight:900;letter-spacing:-.02em}
+header{height:64px;background:var(--mar);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 48px}
+.logo{font-size:28px}.logo b{color:var(--rosa)}
+nav{display:flex;gap:28px;font-size:14px;font-weight:600;opacity:.9}nav .on{opacity:1;border-bottom:3px solid var(--rosa);padding-bottom:2px}
+main{display:grid;grid-template-columns:7fr 5fr;height:836px}
+.l{padding:44px 56px;display:flex;flex-direction:column;gap:26px}
+h1{font-size:68px;line-height:.92}
+.lead{font-size:19px;max-width:46ch}
+.g{display:grid;grid-template-columns:repeat(6,1fr);gap:22px 20px}
+.f{grid-column:span 2}.w3{grid-column:span 3}.w6{grid-column:span 6}
+label,legend{display:block;font-size:14px;font-weight:700;margin-bottom:6px}
+.in{height:46px;border:2px solid var(--mar);background:#fff;border-radius:4px;padding:0 12px;display:flex;align-items:center;justify-content:space-between;font-weight:600}
+.in i{font-style:normal;font-weight:400;opacity:.6;font-size:14px}
+.seg{display:flex;gap:8px}.seg span{flex:1;height:46px;border:2px solid var(--mar);background:#fff;border-radius:4px;display:grid;place-items:center;font-weight:600}
+.seg .on{background:var(--mar);color:#fff}
+.btn{height:52px;padding:0 28px;background:var(--azul);color:#fff;border-radius:4px;font-weight:800;font-size:17px;display:inline-flex;align-items:center;gap:10px;align-self:flex-start}
+.r{background:var(--mar);color:#fff;padding:40px 44px;display:flex;flex-direction:column}
+.r h2{font-size:34px;color:var(--rosa)}
+.row{display:flex;align-items:baseline;gap:12px;padding:9px 0;border-bottom:1px solid #ffffff30;font-size:14px;font-weight:600;color:#ffffffb0}
+.row span{flex:1}.row b{font-stretch:75%;font-weight:900;font-size:34px;color:#fff;letter-spacing:-.01em;line-height:1}
+.row b.w{font-size:22px}
+.prof{margin-top:auto}.prof small{font-size:13px;font-weight:600;color:#ffffffb0;display:flex;justify-content:space-between}
+.prof h3{font-size:20px;color:var(--rosa);margin:0 0 4px}
+</style>
+<header><div class="d logo">Diet<b>GPT</b></div><nav><span class="on">1 Tus datos</span><span>2 Tu plan</span></nav></header>
+<main>
+<section class="l">
+<h1 class="d">Tu plan de comida y entreno</h1>
+<p class="lead">Siete datos y listo: un plan por comidas y una rutina por cada día que entrenas.</p>
+<div class="g">
+<div class="w3"><legend>Sexo</legend><div class="seg"><span>Mujer</span><span class="on">Hombre</span></div></div>
+<div class="w3"><label>Tipo de cuerpo</label><div class="in">Mesomorfo <i>▾</i></div></div>
+<div class="f"><label>Edad</label><div class="in">30 <i>años</i></div></div>
+<div class="f"><label>Peso</label><div class="in">80 <i>kg</i></div></div>
+<div class="f"><label>Altura</label><div class="in">178 <i>cm</i></div></div>
+<div class="w6"><legend>Días de ejercicio por semana</legend><div class="seg"><span>1</span><span>2</span><span class="on">3</span><span>4</span><span>5</span><span>6</span><span>7</span></div></div>
+<div class="w6"><legend>Objetivo</legend><div class="seg"><span class="on">Bajar grasa</span><span>Ganar músculo</span><span>Tonificar</span><span>Mantenerme saludable</span></div></div>
+</div>
+<div class="btn">Armar mi plan →</div>
+</section>
+<aside class="r">
+<h2 class="d">Tu ficha de etapa</h2>
+<div style="margin-top:14px">
+<div class="row"><span>Sexo</span><b class="w">Hombre</b></div>
+<div class="row"><span>Edad</span><b>30 años</b></div>
+<div class="row"><span>Peso</span><b>80 kg</b></div>
+<div class="row"><span>Altura</span><b>178 cm</b></div>
+<div class="row"><span>Cuerpo</span><b class="w">Mesomorfo</b></div>
+<div class="row"><span>Entrenas</span><b>3 días</b></div>
+<div class="row"><span>Objetivo</span><b class="w">Bajar grasa</b></div>
+</div>
+<div class="prof">
+<h3 class="d">Tu semana, como una etapa</h3>
+<svg viewBox="0 0 420 150" width="100%" role="img" aria-label="Perfil de carga de la semana (ejemplo)">
+<g stroke="#ffffff22"><path d="M0 40H420M0 80H420M0 120H420"/><path d="M105 0V130M210 0V130M315 0V130"/></g>
+<path d="M0 130 L40 120 L80 90 L105 50 L130 88 L170 112 L215 70 L245 22 L280 78 L320 108 L350 60 L372 30 L395 96 L420 126 V130 Z" fill="#F6C3D0"/>
+<path d="M0 130 L40 120 L80 90 L105 50 L130 88 L170 112 L215 70 L245 22 L280 78 L320 108 L350 60 L372 30 L395 96 L420 126" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+<g font-family="Archivo" font-weight="800" font-size="11" fill="#12204A" text-anchor="middle"><text x="105" y="68">D1</text><text x="245" y="40">D2</text><text x="372" y="48">D3</text></g>
+</svg>
+<small><span>Pierna y glúteo</span><span>Torso y bíceps</span><span>Hombro y tríceps</span></small>
+</div>
+</aside>
+</main>
+</html>

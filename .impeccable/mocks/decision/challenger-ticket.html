@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es"><meta charset="utf-8"><title>Cartera de boletos</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+:root{--mar:#14284B;--rojo:#D7263D;--carbon:#5B3FA0;--papel:#FBFAF7;--fondo:#E9ECF2}
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;background:var(--fondo);color:var(--mar);font:16px/1.5 Archivo,system-ui,sans-serif}
+header{height:64px;background:var(--mar);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 48px}
+.logo{font-weight:900;font-size:24px;letter-spacing:.06em;text-transform:uppercase}
+nav{display:flex;gap:28px;font-size:14px;font-weight:600}nav .on{border-bottom:3px solid var(--rojo)}
+main{display:grid;grid-template-columns:6fr 6fr;gap:32px;padding:36px 48px;height:836px}
+.c{background:var(--papel);border:1.5px solid var(--mar);position:relative}
+.tab{background:var(--mar);color:#fff;padding:8px 18px;font-weight:800;font-size:13px;letter-spacing:.1em;text-transform:uppercase;display:flex;justify-content:space-between}
+.body{padding:20px 22px}
+h1{font-size:40px;line-height:1;font-weight:900;font-stretch:80%;margin-bottom:6px;text-transform:uppercase}
+.lead{font-size:16px;margin-bottom:18px;color:#3b4b6b}
+.box{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--mar);margin-bottom:14px}
+.box div{padding:8px 12px;border-right:1.5px solid var(--mar);border-bottom:1.5px solid var(--mar)}
+.box div:nth-child(3n){border-right:0}.box div:nth-last-child(-n+3){border-bottom:0}
+.box small{display:block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#4a5a7d}
+.box b{font-size:24px;font-weight:800;color:var(--carbon);font-variant-numeric:tabular-nums;font-stretch:85%}
+.btn{display:inline-block;background:var(--rojo);color:#fff;font-weight:900;padding:14px 28px;letter-spacing:.06em;text-transform:uppercase}
+.stack{display:flex;flex-direction:column;gap:16px}
+.cup .body{padding:0}
+table{width:100%;border-collapse:collapse;font-size:15px}
+td{padding:7px 22px;border-top:1px solid #c3cada;font-variant-numeric:tabular-nums}td.n{text-align:right;color:var(--carbon);font-weight:800}
+.stamp{position:absolute;right:22px;top:46px;border:3px solid var(--rojo);color:var(--rojo);font-weight:900;padding:2px 10px;transform:rotate(-8deg);letter-spacing:.12em;font-size:15px}
+</style>
+<header><div class="logo">DietGPT</div><nav><span class="on">1 Tus datos</span><span>2 Tu plan</span></nav></header>
+<main>
+<section class="c"><div class="tab"><span>Cupón 1 · Tus datos</span><span>N.º 0001</span></div>
+<div class="body"><h1>Tu plan de comida y entreno</h1><p class="lead">Siete datos y listo.</p>
+<div class="box"><div><small>Sexo</small><b>Hombre</b></div><div><small>Edad</small><b>30</b></div><div><small>Peso</small><b>80 kg</b></div><div><small>Altura</small><b>178 cm</b></div><div><small>Cuerpo</small><b>Mesomorfo</b></div><div><small>Días</small><b>3</b></div></div>
+<div class="box" style="grid-template-columns:1fr"><div><small>Objetivo</small><b>Bajar grasa</b></div></div>
+<span class="btn">Armar mi plan →</span></div></section>
+<section class="stack">
+<div class="c cup"><div class="tab"><span>Cupón 2 · Día 1 · Pierna y glúteo</span><span>3 series</span></div><div class="stamp">LISTO</div>
+<table><tr><td>Sentadillas</td><td class="n">3 × 10-12</td></tr><tr><td>Prensa de piernas</td><td class="n">3 × 10-12</td></tr><tr><td>Peso muerto rumano</td><td class="n">3 × 10-12</td></tr></table></div>
+<div class="c cup"><div class="tab"><span>Cupón 3 · Día 2 · Torso y bíceps</span><span>3 series</span></div>
+<table><tr><td>Press de banca</td><td class="n">3 × 10-12</td></tr><tr><td>Remo en barra</td><td class="n">3 × 10-12</td></tr><tr><td>Curl con mancuernas</td><td class="n">3 × 10-12</td></tr></table></div>
+<div class="c cup"><div class="tab"><span>Cupón 4 · Día 3 · Hombro y tríceps</span><span>3 series</span></div>
+<table><tr><td>Press militar</td><td class="n">3 × 10-12</td></tr><tr><td>Elevaciones laterales</td><td class="n">3 × 10-12</td></tr></table></div>
+</section>
+</main>
+</html>

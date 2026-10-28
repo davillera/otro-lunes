@@ -9,7 +9,7 @@ related_targets: ["src/app/plan/page.tsx"]
 
 ## Scope and visitor mode
 
-Operate. Dos pantallas del mismo flujo: `/` (formulario de siete datos) y `/plan` (resultado). No hay landing de marketing: la herramienta es la primera pantalla. Nombre de trabajo "DietGPT". Rediseño completo: el mundo anterior (letreros de mercado verde, mango y tomate) se descartó porque se leía como una cadena de comida rápida; el segundo intento (bordes gruesos, color plano) se descartó por neobrutalista.
+Operate. Dos pantallas del mismo flujo: `/` (formulario de siete datos) y `/plan` (resultado). No hay landing de marketing: la herramienta es la primera pantalla. Nombre "Otro Lunes". Rediseño completo: el mundo anterior (letreros de mercado verde, mango y tomate) se descartó porque se leía como una cadena de comida rápida; el segundo intento (bordes gruesos, color plano) se descartó por neobrutalista.
 
 ## Audience, job, action, proof, constraints
 
@@ -36,7 +36,7 @@ OWN-WORLD: Piedra cálida de fondo (`oklch(0.91 0.015 80)`), loza casi blanca pa
 
 STORY: El visitante entiende que son siete preguntas y un plan, sin registrarse. Cree que es una guía general hecha por IA, no un consejo médico. Completa el formulario, ve su plato llenarse, envía, y recibe un plan que puede leer en la cocina o en el gimnasio y que sigue ahí al recargar.
 
-FIRST VIEWPORT: 1440x900. Cabecera de 64px sobre piedra, sin filete: marca "DietGPT" en serif a la izquierda, pasos estándar "1 Tus datos · 2 Tu plan" a la derecha. Debajo, izquierda (7/12): título serif de 56px "Tu plan de comida y entreno", una línea de apoyo y el formulario en rejilla de seis columnas con el botón terracota en píldora "Armar mi plan" al pie. Derecha (5/12), centrado en vertical y fijo al hacer scroll: el título del tablero, un plato de 360px con el objetivo en serif terracota al centro y los siete puntos de la semana, seis tarjetas de loza en dos columnas (sexo, cuerpo, edad, peso, altura, entrenas) con guion hasta llenarse, y el aviso de guía general. En celular el plato pasa a una tarjeta compacta sobre el título, con edad, peso, altura y días en una línea.
+FIRST VIEWPORT: 1440x900. Cabecera de 64px sobre piedra, sin filete: marca "Otro Lunes" en serif a la izquierda, pasos estándar "1 Tus datos · 2 Tu plan" a la derecha. Debajo, izquierda (7/12): título serif de 56px "Tu plan de comida y entreno", una línea de apoyo y el formulario en rejilla de seis columnas con el botón terracota en píldora "Armar mi plan" al pie. Derecha (5/12), centrado en vertical y fijo al hacer scroll: el título del tablero, un plato de 360px con el objetivo en serif terracota al centro y los siete puntos de la semana, seis tarjetas de loza en dos columnas (sexo, cuerpo, edad, peso, altura, entrenas) con guion hasta llenarse, y el aviso de guía general. En celular el plato pasa a una tarjeta compacta sobre el título, con edad, peso, altura y días en una línea.
 
 FORM: Plato de cerámica, derivación propia desde la comida tras dos tiradas; la tirada 2 (asignado 3) no ofrecía mundos de comida y se descartó por motivos factuales. Elegido por el usuario entre cuatro bocetos; seed:698bd518b8869080.
 

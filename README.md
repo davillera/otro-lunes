@@ -1,6 +1,6 @@
-# DietGPT (nombre de trabajo)
+# Otro Lunes
 
-Versión fullstack de DietGPT en un solo proyecto Next.js. La persona llena siete datos y recibe un plan de alimentación por comidas y una rutina por cada día que entrena, generados con IA. Reemplaza al par `dietgpt-frontend` + `diet-gpt-backend` (NestJS): la llamada al modelo (Gemini u OpenAI, a elección) ahora vive en un Route Handler.
+Herramienta fullstack en un solo proyecto Next.js. La persona llena siete datos y recibe un plan de alimentación por comidas y una rutina por cada día que entrena, generados con IA. La llamada al modelo (Gemini u OpenAI, a elección) vive en un Route Handler.
 
 ## Empezar
 

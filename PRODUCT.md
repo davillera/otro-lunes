@@ -2,7 +2,7 @@
 
 <!-- impeccable:product-schema 1 -->
 
-> Nombre de trabajo: **dietgpt-next** (el proyecto aún no tiene nombre definitivo). Los datos marcados con *(inferido)* salen del código de `dietgpt-frontend` y `diet-gpt-backend` y de la instrucción de empezar sin entrevista; el usuario no los ha confirmado.
+> Nombre: **Otro Lunes**. Los datos marcados con *(inferido)* salen del código de los repos originales (frontend y backend NestJS) y de la instrucción de empezar sin entrevista; el usuario no los ha confirmado.
 
 ## Platform
 
@@ -44,7 +44,7 @@ Ninguno vigente. El proyecto original usaba gris carbón, verde `#74AA9C` y tipo
 
 ## Evidence on Hand
 
-Ningún testimonio, cliente, métrica ni respaldo profesional. No fabricar ninguno. Existen los dos repos originales en `C:\dev\dietgpt-frontend` y `C:\dev\diet-gpt-backend` como referencia funcional.
+Ningún testimonio, cliente, métrica ni respaldo profesional. No fabricar ninguno. Existen los dos repos originales (frontend y backend NestJS) como referencia funcional.
 
 ## Product Principles
 

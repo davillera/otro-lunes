@@ -1,5 +1,5 @@
 ---
-name: DietGPT (working name)
+name: Otro Lunes
 description: Plato de ceramica. Stone ground, glazed-ware surfaces with soft shadows, and a round plate that reads your goal back.
 colors:
   piedra: "oklch(0.91 0.015 80)"
@@ -135,7 +135,7 @@ components:
     rounded: "{rounded.pill}"
 ---
 
-# Design System: DietGPT (working name)
+# Design System: Otro Lunes
 
 ## Overview
 
@@ -159,7 +159,7 @@ Recognisable with no content at all: a round glazed plate with a sunken well, gl
 A warm stone-and-glaze neutral field (hue 80 to 85) with a cool slate-ink for text and selection, and one clay-red for action.
 
 ### Primary
-- **Terracotta** (`terracota`): the primary button fill, the text caret, the "GPT" in the wordmark, the current-step underline.
+- **Terracotta** (`terracota`): the primary button fill, the text caret, the "Lunes" in the wordmark, the current-step underline.
 - **Deep Terracotta** (`terracota-hondo`): primary hover, and every terracotta used as text on stone or glaze (goal on the plate, focus line on day cards, error text and error rings), darker for contrast.
 
 ### Secondary
@@ -193,7 +193,7 @@ A warm stone-and-glaze neutral field (hue 80 to 85) with a cool slate-ink for te
 - **Title** (400, 56px from `sm` up, 36px on mobile, line-height 1.05, -0.025em): the H1 on each page.
 - **Headline** (400, 30px, line-height 1): the plate's own title ("Tu plato", plan title).
 - **Plate goal** (400, 36px, balance-wrapped, terracotta-hondo): the goal at the centre of the plate; 20px in the compact mobile card.
-- **Heading** (400, 24px): day names in the training plan and meal names in the nutrition plan; the wordmark is 24px, 30px from `sm`.
+- **Heading** (400, 24px): day names in the training plan and meal names in the nutrition plan; the wordmark is 20px, 30px from `sm`.
 - **Body** (400, 16px, 1.5, max-w-prose for plan prose): prose, plan text, inputs. Figures are `tabular-nums`.
 - **Label** (600, 14px): field labels, legends. Hints and table headers are 14px soft ink at 400 to 500.
 - **Tile value** (600, 18px, tabular): the value in each glazed tile.
@@ -245,7 +245,7 @@ Atomic levels as built.
 Real radios as glaze segments. Selected is slate fill, glaze text, semibold, plus a Check icon; hover deep stone (deep slate when selected). Grids of 2, 4 or 7 columns.
 
 ### Navigation
-- **SiteHeader:** sticky stone bar, serif wordmark left ("Diet" in ink, "GPT" in terracotta), `Stepper` right. The current step is semibold with a 2px terracotta underline and `aria-current`; a done step shows a Check.
+- **SiteHeader:** sticky stone bar, serif wordmark left ("Otro" in ink, "Lunes" in terracotta), `Stepper` right. The current step is semibold with a 2px terracotta underline and `aria-current`; a done step shows a Check.
 - **Tabs:** a deep-stone pill track; the selected tab is a glaze pill with Loza shadow and semibold; arrow, Home and End keys.
 
 ### Notices

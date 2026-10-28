@@ -5,8 +5,8 @@ import { z } from "zod";
 import { planSchema, type Plan } from "./plan";
 import { profileSchema, type Profile } from "./profile";
 
-const KEY = "dietgpt:last-plan";
-const CHANGE_EVENT = "dietgpt:plan-change";
+const KEY = "otro-lunes:last-plan";
+const CHANGE_EVENT = "otro-lunes:plan-change";
 
 const storedSchema = z.object({
   profile: profileSchema,

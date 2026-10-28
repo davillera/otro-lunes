@@ -14,7 +14,7 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "DietGPT — Plan de comida y entreno",
+  title: "Otro Lunes — Plan de comida y entreno",
   description:
     "Siete datos y listo: un plan de alimentación por comidas y una rutina por cada día que entrenas, generado con IA.",
 };

@@ -2,7 +2,7 @@
 
 <!-- impeccable:product-schema 1 -->
 
-> Nombre: **Otro Lunes**. Los datos marcados con *(inferido)* salen del código de los repos originales (frontend y backend NestJS) y de la instrucción de empezar sin entrevista; el usuario no los ha confirmado.
+> Nombre: **Otro Lunes**. Los datos marcados con _(inferido)_ salen del código de los repos originales (frontend y backend NestJS) y de la instrucción de empezar sin entrevista; el usuario no los ha confirmado.
 
 ## Platform
 
@@ -14,7 +14,7 @@ Next.js (App Router) + TypeScript + Tailwind, fullstack en un solo repo: la llam
 
 ## Users
 
-*(inferido)* Personas hispanohablantes sin entrenador ni nutricionista que quieren una guía concreta para empezar a comer y entrenar mejor. Llegan desde el celular o el computador, en un momento de decisión ("quiero cambiar mi estado físico"), y quieren una respuesta en minutos, sin crear cuenta.
+_(inferido)_ Personas hispanohablantes sin entrenador ni nutricionista que quieren una guía concreta para empezar a comer y entrenar mejor. Llegan desde el celular o el computador, en un momento de decisión ("quiero cambiar mi estado físico"), y quieren una respuesta en minutos, sin crear cuenta.
 
 ## Product Purpose
 
@@ -22,7 +22,7 @@ El usuario describe su cuerpo, su rutina y su objetivo en un formulario corto y 
 
 ## Positioning
 
-*(inferido)* Un plan personalizado a partir de siete datos, en español, sin registro. La IA hace el plan; el producto lo hace comprensible y usable (estructura por comidas y por días de entrenamiento).
+_(inferido)_ Un plan personalizado a partir de siete datos, en español, sin registro. La IA hace el plan; el producto lo hace comprensible y usable (estructura por comidas y por días de entrenamiento).
 
 ## Operating Context
 
@@ -34,7 +34,7 @@ Flujo de tres pasos heredado del proyecto original: inicio, formulario, recomend
 - Validación de entrada también en el servidor, con los mismos rangos que el formulario.
 - La respuesta del modelo es JSON estructurado: `plan_nutricional` (desayuno, media mañana, almuerzo, merienda, cena) y `plan_entrenamiento` (un objeto por día de entrenamiento).
 - Los errores del servicio se comunican con códigos HTTP reales y mensajes en español.
-- Sin cuentas ni base de datos por ahora *(inferido, no decidido)*.
+- Sin cuentas ni base de datos por ahora _(inferido, no decidido)_.
 - Interfaz en español.
 - No es consejo médico: el producto debe decir con claridad que es una guía general y no sustituye a un profesional.
 

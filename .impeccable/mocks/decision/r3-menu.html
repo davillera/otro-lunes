@@ -1,65 +1,312 @@
 <!doctype html>
-<html lang="es"><meta charset="utf-8"><title>Menú del día</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{--noche:#1D181D;--marfil:#F2E9DC;--suave:#B8AB9C;--oro:#D2AE6D;--vino:#8A3A4C;--linea:#4A404A}
-*{box-sizing:border-box;margin:0}
-html{background:var(--noche);color:var(--marfil)}
-body{width:1440px;height:900px;overflow:hidden;background:var(--noche);color:var(--marfil);font:16px/1.5 Jost,system-ui,sans-serif}
-header{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 64px;border-bottom:1px solid var(--linea)}
-.logo{font:500 28px/1 "Cormorant Garamond",serif;letter-spacing:.02em}.logo em{color:var(--oro);font-style:italic}
-nav{display:flex;gap:32px;font-size:14px;color:var(--suave);letter-spacing:.04em}nav .on{color:var(--marfil);border-bottom:1px solid var(--oro);padding-bottom:4px}
-main{display:grid;grid-template-columns:7fr 5fr;gap:64px;padding:48px 64px;height:828px}
-.l{display:flex;flex-direction:column;gap:24px}
-h1{font:500 62px/1 "Cormorant Garamond",serif;letter-spacing:-.01em}
-h1 em{color:var(--oro)}
-.lead{font-size:18px;color:var(--suave);max-width:46ch;font-weight:400}
-.g{display:grid;grid-template-columns:repeat(6,1fr);gap:22px 24px}
-.f{grid-column:span 2}.w3{grid-column:span 3}.w6{grid-column:span 6}
-label,legend{display:block;font-size:13px;color:var(--suave);letter-spacing:.06em;margin-bottom:4px}
-.in{height:46px;border-bottom:1px solid #8c7f8c;display:flex;align-items:center;justify-content:space-between;font:500 22px "Cormorant Garamond",serif}
-.in i{font:400 14px Jost;font-style:normal;color:var(--suave)}
-.seg{display:flex;gap:10px}.seg span{flex:1;height:46px;border:1px solid var(--linea);border-radius:999px;display:grid;place-items:center;color:var(--marfil);font-size:15px}
-.seg .on{background:var(--oro);border-color:var(--oro);color:var(--noche);font-weight:500}
-.btn{height:54px;padding:0 34px;background:var(--oro);color:var(--noche);border-radius:999px;font-weight:500;font-size:16px;letter-spacing:.03em;display:inline-flex;align-items:center;align-self:flex-start;margin-top:4px}
-.menu{border:1px solid var(--oro);outline:1px solid var(--linea);outline-offset:6px;border-radius:2px;padding:40px 44px;display:flex;flex-direction:column;align-items:stretch;gap:12px;align-self:start;min-height:736px;margin:6px}
-.menu h2{font:500 38px/1 "Cormorant Garamond",serif;text-align:center}
-.menu .sub{text-align:center;font:italic 400 18px "Cormorant Garamond",serif;color:var(--oro);padding-bottom:18px}
-.orn{display:flex;align-items:center;gap:12px;color:var(--oro);font-size:13px;margin:2px 0 8px}.orn::before,.orn::after{content:"";flex:1;border-top:1px solid var(--linea)}
-.row{display:flex;align-items:baseline;gap:10px;font-size:16px;color:var(--suave)}
-.row::after{content:"";order:1;flex:1;border-bottom:1px dotted #6d616d;transform:translateY(-4px)}
-.row span{order:0}.row b{order:2;font:500 24px "Cormorant Garamond",serif;color:var(--marfil)}
-.row b.hot{color:var(--oro)}
-.note{margin-top:auto;text-align:center;font:italic 400 15px/1.5 "Cormorant Garamond",serif;color:var(--suave);padding-top:16px}
-</style>
-<header><div class="logo">Diet<em>GPT</em></div><nav><span class="on">1 Tus datos</span><span>2 Tu plan</span></nav></header>
-<main>
-<section class="l">
-<h1>Tu plan de comida <em>y entreno</em></h1>
-<p class="lead">Siete datos y listo: un plan por comidas y una rutina por cada día que entrenas.</p>
-<div class="g">
-<div class="w3"><legend>Sexo</legend><div class="seg"><span>Mujer</span><span class="on">Hombre</span></div></div>
-<div class="w3"><label>Tipo de cuerpo</label><div class="in">Mesomorfo <i>▾</i></div></div>
-<div class="f"><label>Edad</label><div class="in">30 <i>años</i></div></div>
-<div class="f"><label>Peso</label><div class="in">80 <i>kg</i></div></div>
-<div class="f"><label>Altura</label><div class="in">178 <i>cm</i></div></div>
-<div class="w6"><legend>Días de ejercicio por semana</legend><div class="seg"><span>1</span><span>2</span><span class="on">3</span><span>4</span><span>5</span><span>6</span><span>7</span></div></div>
-<div class="w6"><legend>Objetivo</legend><div class="seg"><span class="on">Bajar grasa</span><span>Ganar músculo</span><span>Tonificar</span><span>Mantenerme saludable</span></div></div>
-</div>
-<div class="btn">Armar mi plan →</div>
-</section>
-<aside class="menu">
-<h2>Tu tablero</h2><div class="sub">Menú de partida</div>
-<div class="orn">✦</div>
-<div class="row"><span>Sexo</span><b>Hombre</b></div>
-<div class="row"><span>Edad</span><b>30 años</b></div>
-<div class="row"><span>Peso</span><b>80 kg</b></div>
-<div class="row"><span>Altura</span><b>178 cm</b></div>
-<div class="row"><span>Tipo de cuerpo</span><b>Mesomorfo</b></div>
-<div class="orn">✦</div>
-<div class="row"><span>Días de entreno</span><b>3 por semana</b></div>
-<div class="row"><span>Objetivo</span><b class="hot">Bajar grasa</b></div>
-<p class="note">Es una guía general generada con IA y no sustituye a un médico, nutricionista o entrenador.</p>
-</aside>
-</main>
+<html lang="es">
+  <meta charset="utf-8" /><title>Menú del día</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --noche: #1d181d;
+      --marfil: #f2e9dc;
+      --suave: #b8ab9c;
+      --oro: #d2ae6d;
+      --vino: #8a3a4c;
+      --linea: #4a404a;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+    html {
+      background: var(--noche);
+      color: var(--marfil);
+    }
+    body {
+      width: 1440px;
+      height: 900px;
+      overflow: hidden;
+      background: var(--noche);
+      color: var(--marfil);
+      font:
+        16px/1.5 Jost,
+        system-ui,
+        sans-serif;
+    }
+    header {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 64px;
+      border-bottom: 1px solid var(--linea);
+    }
+    .logo {
+      font:
+        500 28px/1 "Cormorant Garamond",
+        serif;
+      letter-spacing: 0.02em;
+    }
+    .logo em {
+      color: var(--oro);
+      font-style: italic;
+    }
+    nav {
+      display: flex;
+      gap: 32px;
+      font-size: 14px;
+      color: var(--suave);
+      letter-spacing: 0.04em;
+    }
+    nav .on {
+      color: var(--marfil);
+      border-bottom: 1px solid var(--oro);
+      padding-bottom: 4px;
+    }
+    main {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: 64px;
+      padding: 48px 64px;
+      height: 828px;
+    }
+    .l {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    h1 {
+      font:
+        500 62px/1 "Cormorant Garamond",
+        serif;
+      letter-spacing: -0.01em;
+    }
+    h1 em {
+      color: var(--oro);
+    }
+    .lead {
+      font-size: 18px;
+      color: var(--suave);
+      max-width: 46ch;
+      font-weight: 400;
+    }
+    .g {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 22px 24px;
+    }
+    .f {
+      grid-column: span 2;
+    }
+    .w3 {
+      grid-column: span 3;
+    }
+    .w6 {
+      grid-column: span 6;
+    }
+    label,
+    legend {
+      display: block;
+      font-size: 13px;
+      color: var(--suave);
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+    .in {
+      height: 46px;
+      border-bottom: 1px solid #8c7f8c;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font:
+        500 22px "Cormorant Garamond",
+        serif;
+    }
+    .in i {
+      font: 400 14px Jost;
+      font-style: normal;
+      color: var(--suave);
+    }
+    .seg {
+      display: flex;
+      gap: 10px;
+    }
+    .seg span {
+      flex: 1;
+      height: 46px;
+      border: 1px solid var(--linea);
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      color: var(--marfil);
+      font-size: 15px;
+    }
+    .seg .on {
+      background: var(--oro);
+      border-color: var(--oro);
+      color: var(--noche);
+      font-weight: 500;
+    }
+    .btn {
+      height: 54px;
+      padding: 0 34px;
+      background: var(--oro);
+      color: var(--noche);
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 0.03em;
+      display: inline-flex;
+      align-items: center;
+      align-self: flex-start;
+      margin-top: 4px;
+    }
+    .menu {
+      border: 1px solid var(--oro);
+      outline: 1px solid var(--linea);
+      outline-offset: 6px;
+      border-radius: 2px;
+      padding: 40px 44px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+      align-self: start;
+      min-height: 736px;
+      margin: 6px;
+    }
+    .menu h2 {
+      font:
+        500 38px/1 "Cormorant Garamond",
+        serif;
+      text-align: center;
+    }
+    .menu .sub {
+      text-align: center;
+      font:
+        italic 400 18px "Cormorant Garamond",
+        serif;
+      color: var(--oro);
+      padding-bottom: 18px;
+    }
+    .orn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--oro);
+      font-size: 13px;
+      margin: 2px 0 8px;
+    }
+    .orn::before,
+    .orn::after {
+      content: "";
+      flex: 1;
+      border-top: 1px solid var(--linea);
+    }
+    .row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 16px;
+      color: var(--suave);
+    }
+    .row::after {
+      content: "";
+      order: 1;
+      flex: 1;
+      border-bottom: 1px dotted #6d616d;
+      transform: translateY(-4px);
+    }
+    .row span {
+      order: 0;
+    }
+    .row b {
+      order: 2;
+      font:
+        500 24px "Cormorant Garamond",
+        serif;
+      color: var(--marfil);
+    }
+    .row b.hot {
+      color: var(--oro);
+    }
+    .note {
+      margin-top: auto;
+      text-align: center;
+      font:
+        italic 400 15px/1.5 "Cormorant Garamond",
+        serif;
+      color: var(--suave);
+      padding-top: 16px;
+    }
+  </style>
+  <header>
+    <div class="logo">Diet<em>GPT</em></div>
+    <nav><span class="on">1 Tus datos</span><span>2 Tu plan</span></nav>
+  </header>
+  <main>
+    <section class="l">
+      <h1>Tu plan de comida <em>y entreno</em></h1>
+      <p class="lead">
+        Siete datos y listo: un plan por comidas y una rutina por cada día que
+        entrenas.
+      </p>
+      <div class="g">
+        <div class="w3">
+          <legend>Sexo</legend>
+          <div class="seg">
+            <span>Mujer</span><span class="on">Hombre</span>
+          </div>
+        </div>
+        <div class="w3">
+          <label>Tipo de cuerpo</label>
+          <div class="in">Mesomorfo <i>▾</i></div>
+        </div>
+        <div class="f">
+          <label>Edad</label>
+          <div class="in">30 <i>años</i></div>
+        </div>
+        <div class="f">
+          <label>Peso</label>
+          <div class="in">80 <i>kg</i></div>
+        </div>
+        <div class="f">
+          <label>Altura</label>
+          <div class="in">178 <i>cm</i></div>
+        </div>
+        <div class="w6">
+          <legend>Días de ejercicio por semana</legend>
+          <div class="seg">
+            <span>1</span><span>2</span><span class="on">3</span><span>4</span
+            ><span>5</span><span>6</span><span>7</span>
+          </div>
+        </div>
+        <div class="w6">
+          <legend>Objetivo</legend>
+          <div class="seg">
+            <span class="on">Bajar grasa</span><span>Ganar músculo</span
+            ><span>Tonificar</span><span>Mantenerme saludable</span>
+          </div>
+        </div>
+      </div>
+      <div class="btn">Armar mi plan →</div>
+    </section>
+    <aside class="menu">
+      <h2>Tu tablero</h2>
+      <div class="sub">Menú de partida</div>
+      <div class="orn">✦</div>
+      <div class="row"><span>Sexo</span><b>Hombre</b></div>
+      <div class="row"><span>Edad</span><b>30 años</b></div>
+      <div class="row"><span>Peso</span><b>80 kg</b></div>
+      <div class="row"><span>Altura</span><b>178 cm</b></div>
+      <div class="row"><span>Tipo de cuerpo</span><b>Mesomorfo</b></div>
+      <div class="orn">✦</div>
+      <div class="row"><span>Días de entreno</span><b>3 por semana</b></div>
+      <div class="row"><span>Objetivo</span><b class="hot">Bajar grasa</b></div>
+      <p class="note">
+        Es una guía general generada con IA y no sustituye a un médico,
+        nutricionista o entrenador.
+      </p>
+    </aside>
+  </main>
 </html>

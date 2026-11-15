@@ -4,6 +4,8 @@ import { generatePlan } from "@/lib/plan/generate";
 import { profileSchema } from "@/lib/plan/profile";
 import { isRateLimited } from "@/lib/rate-limit";
 
+export const maxDuration = 60;
+
 function errorResponse(
   status: number,
   code: string,

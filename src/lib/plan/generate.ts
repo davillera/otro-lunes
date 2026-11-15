@@ -34,16 +34,40 @@ type ProviderId = keyof typeof PROVIDERS;
 
 const clients = new Map<ProviderId, OpenAI>();
 
-function getProviderId(): ProviderId {
-  const id = (process.env.AI_PROVIDER || "gemini").toLowerCase();
-  if (id in PROVIDERS) return id as ProviderId;
-  console.error(`[plan] AI_PROVIDER "${id}" no es válido (gemini u openai)`);
-  throw planErrors.notConfigured();
+function hasConfiguredKey(id: ProviderId): boolean {
+  const provider = PROVIDERS[id];
+  const key = process.env[provider.keyEnv]?.trim();
+  return Boolean(key);
+}
+
+function getCandidateProviders(): ProviderId[] {
+  const explicit = process.env.AI_PROVIDER?.toLowerCase().trim();
+  if (explicit === "openai" || explicit === "gemini") {
+    const fallback: ProviderId = explicit === "openai" ? "gemini" : "openai";
+    return [explicit, fallback];
+  }
+
+  const openAiKey = process.env.OPENAI_API_KEY?.trim();
+  const geminiKey = process.env.GEMINI_API_KEY?.trim();
+
+  const hasValidGeminiKey = Boolean(
+    geminiKey && geminiKey.startsWith("AIzaSy"),
+  );
+  const hasOpenAiKey = Boolean(openAiKey && openAiKey.startsWith("sk-"));
+
+  if (hasOpenAiKey && !hasValidGeminiKey) {
+    return ["openai", "gemini"];
+  }
+  if (hasValidGeminiKey && !hasOpenAiKey) {
+    return ["gemini", "openai"];
+  }
+
+  return openAiKey ? ["openai", "gemini"] : ["gemini", "openai"];
 }
 
 function getClient(id: ProviderId): OpenAI {
   const provider = PROVIDERS[id];
-  const apiKey = process.env[provider.keyEnv];
+  const apiKey = process.env[provider.keyEnv]?.trim();
   if (!apiKey) {
     console.error(`[plan] falta ${provider.keyEnv}`);
     throw planErrors.notConfigured();
@@ -61,13 +85,26 @@ function getClient(id: ProviderId): OpenAI {
   return client;
 }
 
+function isAuthenticationError(error: unknown): boolean {
+  if (error instanceof OpenAI.APIError) {
+    if (error.status === 401 || error.status === 403) return true;
+    if (
+      error.status === 400 &&
+      error.message.toLowerCase().includes("api key")
+    ) {
+      return true;
+    }
+  }
+  return false;
+}
+
 function toPlanError(error: unknown, providerName: string): PlanError {
   if (error instanceof PlanError) return error;
   if (error instanceof OpenAI.APIError) {
     console.error(
       `[plan] ${providerName} respondió ${error.status}: ${error.message}`,
     );
-    if (error.status === 401 || error.status === 403) {
+    if (isAuthenticationError(error)) {
       return planErrors.notConfigured();
     }
     if (error.status === 429 || error.status === 503) {
@@ -86,44 +123,68 @@ export async function generatePlan(profile: Profile): Promise<Plan> {
     return samplePlan(profile);
   }
 
-  let providerName: string = PROVIDERS.gemini.name;
+  const candidateProviders = getCandidateProviders().filter(hasConfiguredKey);
+  if (candidateProviders.length === 0) {
+    console.error("[plan] Ningún proveedor tiene una API key configurada.");
+    throw planErrors.notConfigured();
+  }
 
-  try {
-    const id = getProviderId();
+  let lastError: unknown;
+  let lastProviderName = PROVIDERS[candidateProviders[0]].name;
+
+  for (let pIndex = 0; pIndex < candidateProviders.length; pIndex++) {
+    const id = candidateProviders[pIndex];
     const provider = PROVIDERS[id];
-    providerName = provider.name;
+    lastProviderName = provider.name;
     const model = process.env[provider.modelEnv] || provider.defaultModel;
     const ai = getClient(id);
 
-    for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
-      const completion = await ai.chat.completions.parse({
-        model,
-        messages: [
-          { role: "system", content: SYSTEM_PROMPT },
-          { role: "user", content: buildUserPrompt(profile) },
-        ],
-        response_format: zodResponseFormat(planSchema, "plan"),
-        max_completion_tokens: 4000,
-      });
+    try {
+      for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+        const completion = await ai.chat.completions.parse({
+          model,
+          messages: [
+            { role: "system", content: SYSTEM_PROMPT },
+            { role: "user", content: buildUserPrompt(profile) },
+          ],
+          response_format: zodResponseFormat(planSchema, "plan"),
+          max_completion_tokens: 4000,
+        });
 
-      const message = completion.choices[0]?.message;
-      if (message?.refusal) {
+        const message = completion.choices[0]?.message;
+        if (message?.refusal) {
+          console.error(
+            `[plan] el modelo (${provider.name}) rechazó la solicitud: ${message.refusal}`,
+          );
+          throw planErrors.failed();
+        }
+
+        const plan = message?.parsed;
+        const problem = plan
+          ? checkPlan(plan, profile.exerciseFrequency)
+          : "respuesta vacía";
+        if (plan && !problem) return plan;
+
         console.error(
-          `[plan] el modelo rechazó la solicitud: ${message.refusal}`,
+          `[plan] ${provider.name} intento ${attempt} descartado: ${problem}`,
         );
-        throw planErrors.failed();
+      }
+      throw planErrors.incomplete();
+    } catch (error) {
+      lastError = error;
+      const isAuth = isAuthenticationError(error);
+      const hasNext = pIndex < candidateProviders.length - 1;
+
+      if (isAuth && hasNext) {
+        console.warn(
+          `[plan] ${provider.name} falló por autenticación (${error instanceof Error ? error.message : "clave no válida"}). Probando con el siguiente proveedor disponible...`,
+        );
+        continue;
       }
 
-      const plan = message?.parsed;
-      const problem = plan
-        ? checkPlan(plan, profile.exerciseFrequency)
-        : "respuesta vacía";
-      if (plan && !problem) return plan;
-
-      console.error(`[plan] intento ${attempt} descartado: ${problem}`);
+      throw toPlanError(error, provider.name);
     }
-    throw planErrors.incomplete();
-  } catch (error) {
-    throw toPlanError(error, providerName);
   }
+
+  throw toPlanError(lastError, lastProviderName);
 }
